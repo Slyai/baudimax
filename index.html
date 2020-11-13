@@ -4,190 +4,189 @@
 	<title>Projet Baudimax</title>
 	<link href="style.css" rel="stylesheet">
 	<meta author="corentin dekeyne / slyai"/>
-	<meta ver="0.8.2"/>
-	<meta copyright="creative commons 2.0">
+	<meta ver="0.9.0"/>
+	<meta copyright="Apache Licence 2.0">
+	<script type="text/javascript" src="config.js"></script>
+	<meta commecodeinfile="ce fichier est codé avec le q"/>
 	<meta charset="utf-8"/>
-	<script type="text/javascript">let time = '150'</script>
 </head>
 <body>
-			<!-- Partie NON MODIFIABLE a l'exception de la variable ip -->
-	<p> l'ip configuré et <script>
-		let ip = '192.168.1.4'
+			<!-- Partie NON MODIFIABLE -->
+	<p> l'ip configuré est <script>
 		document.write(ip)
 	</script>
 	</p>
-			<!-- tout les bouton MODIFIABLE -->
 <table>
 	<tr><td>Nom</td><td>Ouvrir</td><td>Fermer</td></tr>
 	<tr>
-		<td>Tout les relais</td>
-		<td><a class="oaRelay" onclick="openallRelay()">Ouvrir</a></td>
-		<td><a class="faRelay" onclick="closeallRelay()">Fermer</a></td>
+		<td><script>document.write(allRelais)</script></td>
+		<td><a class="buttonGreen" onclick="openallRelay()"><script>document.write(nameButtonOn)</script></a></td>
+		<td><a class="buttonRed" onclick="closeallRelay()"><script>document.write(nameButtonOff)</script></a></td>
 	</tr>
 	<tr>
-		<td>Relais 1</td>
-		<td><a class="oRelay1" onclick="openRelay1()">Ouvrir</a></td>
-		<td><a class="fRelay1" onclick="closeRelay1()">Fermer</a></td>
+		<td><script>document.write(relais1)</script></td>
+		<td><a class="buttonGreen" onclick="openRelay1()"><script>document.write(nameButtonOn)</script></a></td>
+		<td><a class="buttonRed" onclick="closeRelay1()"><script>document.write(nameButtonOff)</script></a></td>
 	</tr>
 	<tr>
-		<td>Relais 2</td>
-		<td><a class="oRelay2" onclick="openRelay2()">Ouvrir</a></td>
-		<td><a class="fRelay2" onclick="closeRelay2()">Fermer</a></td>
+		<td><script>document.write(relais2)</script></td>
+		<td><a class="buttonGreen" onclick="openRelay2()"><script>document.write(nameButtonOn)</script></a></td>
+		<td><a class="buttonRed" onclick="closeRelay2()"><script>document.write(nameButtonOff)</script></a></td>
 	</tr>
 	<tr>
-		<td>Relais 3</td>
-		<td><a class="oRelay3" onclick="openRelay3()">Ouvrir</a></td>
-		<td><a class="fRelay3" onclick="closeRelay3()">Fermer</a></td>
+		<td><script>document.write(relais3)</script></td>
+		<td><a class="buttonGreen" onclick="openRelay3()"><script>document.write(nameButtonOn)</script></a></td>
+		<td><a class="buttonRed" onclick="closeRelay3()"><script>document.write(nameButtonOff)</script></a></td>
 	</tr>
 	<tr>
-		<td>Relais 4</td>
-		<td><a class="oRelay4" onclick="openRelay4()">Ouvrir</a></td>
-		<td><a class="fRelay4" onclick="closeRelay4()">Fermer</a></td>
+		<td><script>document.write(relais4)</script></td>
+		<td><a class="buttonGreen" onclick="openRelay4()"><script>document.write(nameButtonOn)</script></a></td>
+		<td><a class="buttonRed" onclick="closeRelay4()"><script>document.write(nameButtonOff)</script></a></td>
 	</tr>
 	<tr>
-		<td>Relais 5</td>
-		<td><a class="oRelay5" onclick="openRelay5()">Ouvrir</a></td>
-		<td><a class="fRelay5" onclick="closeRelay5()">Fermer</a></td></tr>
+		<td><script>document.write(relais5)</script></td>
+		<td><a class="buttonGreen" onclick="openRelay5()"><script>document.write(nameButtonOn)</script></a></td>
+		<td><a class="buttonRed" onclick="closeRelay5()"><script>document.write(nameButtonOff)</script></a></td></tr>
 	<tr>
-		<td>Relais 6</td>
-		<td><a class="oRelay6" onclick="openRelay6()">Ouvrir</a></td>
-		<td><a class="fRelay6" onclick="closeRelay6()">Fermer</a></td>
+		<td><script>document.write(relais6)</script></td>
+		<td><a class="buttonGreen" onclick="openRelay6()"><script>document.write(nameButtonOn)</script></a></td>
+		<td><a class="buttonRed" onclick="closeRelay6()"><script>document.write(nameButtonOff)</script></a></td>
 	</tr>
 	<tr>
-		<td>Relais 7</td>
-		<td><a class="oRelay7" onclick="openRelay7()">Ouvrir</a></td>
-		<td><a class="fRelay7" onclick="closeRelay7()">Fermer</a></td>
+		<td><script>document.write(relais7)</script></td>
+		<td><a class="buttonGreen" onclick="openRelay7()"><script>document.write(nameButtonOn)</script></a></td>
+		<td><a class="buttonRed" onclick="closeRelay7()"><script>document.write(nameButtonOff)</script></a></td>
 	</tr>
 	<tr>
-		<td>Relais 8</td>
-		<td><a class="oRelay8" onclick="openRelay8()">Ouvrir</a></td>
-		<td><a class="fRelay8" onclick="closeRelay8()">Fermer</a></td>
+		<td><script>document.write(relais8)</script></td>
+		<td><a class="buttonGreen" onclick="openRelay8()"><script>document.write(nameButtonOn)</script></a></td>
+		<td><a class="buttonRed" onclick="closeRelay8()"><script>document.write(nameButtonOff)</script></a></td>
 	</tr>
 </table>
 	<!-- Partie script NE PAS TOUCHER -->
 	<script> 
       var win; 
       function openallRelay() { 
-        win = window.open("http://" + ip + "/30000/45", "_blank", "width=900, height=786"); 
+        win = window.open("http://" + ip + "/30000/45", "_blank", "width=1, height=1"); 
         setTimeout(closeW, time); 
       }
     </script>
     <script> 
       var win; 
       function closeallRelay() { 
-        win = window.open("http://" + ip + "/30000/44", "_blank", "width=900, height=786"); 
+        win = window.open("http://" + ip + "/30000/44", "_blank", "width=1, height=1"); 
         setTimeout(closeW, time); 
       }
     </script>
     <script> 
       var win; 
       function openRelay1() { 
-        win = window.open("http://" + ip + "/30000/01", "_blank", "width=900, height=786"); 
+        win = window.open("http://" + ip + "/30000/01", "_blank", "width=1, height=1"); 
         setTimeout(closeW, time); 
       }
     </script>
     <script> 
       var win; 
       function closeRelay1() { 
-        win = window.open("http://" + ip + "/30000/00", "_blank", "width=900, height=786"); 
+        win = window.open("http://" + ip + "/30000/00", "_blank", "width=1, height=1"); 
         setTimeout(closeW, time); 
       }
     </script>
     <script> 
       var win; 
       function openRelay2() { 
-        win = window.open("http://" + ip + "/30000/03", "_blank", "width=900, height=786"); 
+        win = window.open("http://" + ip + "/30000/03", "_blank", "width=1, height=1"); 
         setTimeout(closeW, time); 
       }
     </script> 
     <script> 
       var win; 
       function closeRelay2() { 
-        win = window.open("http://" + ip + "/30000/02", "_blank", "width=900, height=786"); 
+        win = window.open("http://" + ip + "/30000/02", "_blank", "width=1, height=1"); 
         setTimeout(closeW, time); 
       }
     </script> 
     <script> 
       var win; 
       function openRelay3() { 
-        win = window.open("http://" + ip + "/30000/05", "_blank", "width=900, height=786"); 
+        win = window.open("http://" + ip + "/30000/05", "_blank", "width=1, height=1"); 
         setTimeout(closeW, time); 
       }
     </script> 
     <script> 
       var win; 
       function closeRelay3() { 
-        win = window.open("http://" + ip + "/30000/04", "_blank", "width=900, height=786"); 
+        win = window.open("http://" + ip + "/30000/04", "_blank", "width=1, height=1"); 
         setTimeout(closeW, time); 
       }
     </script> 
     <script> 
       var win; 
       function openRelay4() { 
-        win = window.open("http://" + ip + "/30000/07", "_blank", "width=900, height=786"); 
+        win = window.open("http://" + ip + "/30000/07", "_blank", "width=1, height=1"); 
         setTimeout(closeW, time); 
       }
     </script> 
     <script> 
       var win; 
       function closeRelay4() { 
-        win = window.open("http://" + ip + "/30000/06", "_blank", "width=900, height=786"); 
+        win = window.open("http://" + ip + "/30000/06", "_blank", "width=1, height=1"); 
         setTimeout(closeW, time); 
       }
     </script> 
     <script> 
       var win; 
       function openRelay5() { 
-        win = window.open("http://" + ip + "/30000/09", "_blank", "width=900, height=786"); 
+        win = window.open("http://" + ip + "/30000/09", "_blank", "width=1, height=1"); 
         setTimeout(closeW, time); 
       }
     </script> 
     <script> 
       var win; 
       function closeRelay5() { 
-        win = window.open("http://" + ip + "/30000/08", "_blank", "width=900, height=786"); 
+        win = window.open("http://" + ip + "/30000/08", "_blank", "width=1, height=1"); 
         setTimeout(closeW, time); 
       }
     </script> 
     <script> 
       var win; 
       function openRelay6() { 
-        win = window.open("http://" + ip + "/30000/11", "_blank", "width=900, height=786"); 
+        win = window.open("http://" + ip + "/30000/11", "_blank", "width=1, height=1"); 
         setTimeout(closeW, time); 
       }
     </script> 
     <script> 
       var win; 
       function closeRelay6() { 
-        win = window.open("http://" + ip + "/30000/10", "_blank", "width=900, height=786"); 
+        win = window.open("http://" + ip + "/30000/10", "_blank", "width=1, height=1"); 
         setTimeout(closeW, time); 
       }
     </script> 
     <script> 
       var win; 
       function openRelay7() { 
-        win = window.open("http://" + ip + "/30000/13", "_blank", "width=900, height=786"); 
+        win = window.open("http://" + ip + "/30000/13", "_blank", "width=1, height=1"); 
         setTimeout(closeW, time); 
       }
     </script> 
     <script> 
       var win; 
       function closeRelay7() { 
-        win = window.open("http://" + ip + "/30000/12", "_blank", "width=900, height=786"); 
+        win = window.open("http://" + ip + "/30000/12", "_blank", "width=1, height=1"); 
         setTimeout(closeW, time); 
       }
     </script> 
     <script> 
       var win; 
       function openRelay8() { 
-        win = window.open("http://" + ip + "/30000/15", "_blank", "width=900, height=786"); 
+        win = window.open("http://" + ip + "/30000/15", "_blank", "width=1, height=1"); 
         setTimeout(closeW, time); 
       }
     </script> 
     <script> 
       var win; 
       function closeRelay8() { 
-        win = window.open("http://" + ip + "/30000/14", "_blank", "width=900, height=786"); 
+        win = window.open("http://" + ip + "/30000/14", "_blank", "width=1, height=1"); 
         setTimeout(closeW, time); 
       }
     </script> 
@@ -197,6 +196,7 @@
         win.close(); 
       }
     </script>
+    <p>Nous sommes à la version : <script>document.write(ver)</script></p>
     <a class="download" href="http://download.slygame.fr/baudimax.zip">telecharger le projet OpenSource</a>
 </body>
 </html>
