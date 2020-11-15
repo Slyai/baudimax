@@ -2,6 +2,7 @@ body{
   position: absolute; 
   top: 50%; left: 50%; 
   transform: translate(-50%, -50%); 
+  background-color: #DCDCDC;
 }
 
 table{
@@ -45,7 +46,7 @@ td{
 .buttonGreen {
 	background-color:#17CB0C;
 	border-radius:28px;
-	border:1px solid #17CB0C;
+	border:3px solid #17CB0C;
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
@@ -59,7 +60,7 @@ td{
 .buttonRed {
 	background-color:#FF3C33;
 	border-radius:28px;
-	border:1px solid #FF3C33;
+	border:3px solid #FF3C33;
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;

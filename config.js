@@ -16,5 +16,6 @@ let nameButtonOff = 'off';
 
 /* Cette Partie est reservez aux dev merci DE NE PAS LA MODIFIER*/
 
-let ver = 'V0.9.0';
-var time = '200';
+let ver = 'V0.9.5';
+var time = '150';
+let texteB = 'ip configuré :';
