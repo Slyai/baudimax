@@ -1,4 +1,4 @@
-V1.0.0 : en cour de dev (fin du projet/ release du projet)
+V1.0.0 : verification du code et ajout de la modif du tableu et ajout d'un titre (fin du projet/ release du projet)
 
 V0.9.5 : modification mineure
 

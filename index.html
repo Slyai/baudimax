@@ -4,23 +4,19 @@
 	<title>Projet Baudimax</title>
 	<link href="style.css" rel="stylesheet">
 	<meta author="corentin dekeyne / slyai"/>
-	<meta ver="0.9.5"/>
+	<meta ver="1.0.0"/>
 	<meta copyright="Apache Licence 2.0">
 	<script type="text/javascript" src="config.js"></script>
-	<meta commecodeinfile="ce fichier est codé avec le q"/>
 	<meta charset="utf-8"/>
 </head>
 <body>
 			<!-- Partie NON MODIFIABLE -->
-	<p> <script>
-		document.write(texteB)
-	</script> <script>
-		document.write(ip)
-	</script>
+	<br></br></br></br>
+	<h1><script>document.write(titreSite)</script></h1>
 			<!-- pour changer L'ip allez dans config.js et pour changer l'ip du relay allez ici http://ip configuré/30000/41 -->
-	</p>
+
 <table>
-	<tr><td>Nom</td><td>Ouvrir</td><td>Fermer</td></tr>
+	<tr><td><script>document.write(nomTable1)</script></td><td><script>document.write(nomTable2)</script></td><td><script>document.write(nomTable3)</script></td></tr>
 	<tr>
 		<td><script>document.write(allRelais)</script></td>
 		<td><a class="buttonGreen" onclick="openallRelay()"><script>document.write(nameButtonOn)</script></a></td>
@@ -199,6 +195,11 @@
         win.close(); 
       }
     </script>
+    <p class="color"> <script>
+		document.write(texteB)
+	</script> <script>
+		document.write(ip)
+	</script>
     <p>Nous sommes à la version : <script>document.write(ver)</script></p>
     <a class="download" href="http://download.slygame.fr/baudimax.zip">telecharger le projet OpenSource</a>
 </body>

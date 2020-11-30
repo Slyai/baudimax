@@ -1,8 +1,23 @@
+/* 
+	Auteur du projet : slyai
+	Version : 1.0.0
+	Copyright : apache licence 2.0
+*/
+
 body{
   position: absolute; 
   top: 50%; left: 50%; 
   transform: translate(-50%, -50%); 
   background-color: #DCDCDC;
+}
+
+h1{
+ text-align: center;
+ position: relative;
+}
+
+.color {
+	text-decoration-color: black;
 }
 
 table{
