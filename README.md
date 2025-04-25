@@ -1,3 +1,5 @@
+Ce projet et archiver et va être supprimer.
+
 Information : ce script à été écris quand j'avais 16 ans, il peut contenir des erreur ou peut être optimiser, je vous laisse vous en occuper si vous le souhaitez.
 
 # BAUDIMAX
